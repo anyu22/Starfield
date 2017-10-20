@@ -5,6 +5,7 @@ void setup()
 	//your code here
 	for(int x = 0; x < 400; x++){
 		one[x] = new NormalParticle();
+		one[x].show();
 
 	}
 }
