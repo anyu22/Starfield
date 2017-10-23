@@ -1,18 +1,20 @@
 //your code here
-NormalParticle[] one = new NormalParticle[400];
+NormalParticle[] one = new NormalParticle[50];
 void setup()
 {
 	size(512, 512);
-	for(int x = 0; x < 400; x++){
+	for(int x = 0; x < 50; x++){
 		one[x] = new NormalParticle();
 	}
+
 }
 void draw()
 {
-	for(int x = 0; x < 400; x++){
+	for(int x = 0; x < 50; x++){
 		one[x].show();
 		one[x].move();
 	}
+
 }
 class NormalParticle
 {
@@ -22,7 +24,7 @@ class NormalParticle
 	NormalParticle(){ 
 		x = 150;
 		y = 150;
-		speed = ((Math.random()*180)+0);
+		speed = ((Math.random()*145)+500);
 		angle = ((Math.random()*180)-90);
 	}
 	public void show(){
@@ -30,8 +32,9 @@ class NormalParticle
 		fill(255);
 	}
 	public void move(){
-		x = x + Math.cos(angle); //initialization error?
-		y = y + Math.sin(angle);
+		x = x + Math.cos(angle) *50; //initialization error?
+		y = y + Math.sin(angle) *50 ;
+
 	}
 
 }
